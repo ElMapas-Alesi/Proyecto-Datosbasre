@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar cliente</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <h2>Registrar cliente - Librería</h2>
+
+    <div class="tarjeta">
+        <form action="php/insert.php" method="POST">
+
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>Apellido:</label>
+            <input type="text" name="apellido" required>
+
+            <label>Email:</label>
+            <input type="email" name="email">
+
+            <label>Teléfono:</label>
+            <input type="number" name="telefono" required>
+
+            <label>Dirección:</label>
+            <input type="text" name="direccion">
+
+            <button type="submit">Registrar cliente</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
