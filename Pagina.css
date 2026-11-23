@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f5f9;
+    color: #10213b;
+}
+
+.menu {
+    width: 220px;
+    height: 100vh;
+    background-color: #0e2340;
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.menu h2 {
+    font-size: 24px;
+}
+
+.menu p {
+    font-size: 12px;
+    color: #9fb5d3;
+    margin-top: 5px;
+}
+
+.menu h4 {
+    font-size: 11px;
+    color: #7f9bc1;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.menu nav a {
+    display: block;
+    color: #d6e3f4;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.menu nav a:hover {
+    background-color: #1b365d;
+}
+
+.menu nav .activo {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* USUARIO */
+.usuario {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+}
+
+.contenido {
+    margin-left: 220px;
+}
+
+header {
+    background-color: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+header small {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+header h4 {
+    margin-top: 5px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.perfil strong {
+    background-color: #dbeafe;
+    color: #2563eb;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+main {
+    padding: 30px;
+}
+
+main h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+}
+
+.tarjeta p {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.tarjeta h2 {
+    font-size: 23px;
+}
+
+/* TABLA */
+.tabla-contenedor {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.tabla-contenedor h3 {
+    font-size: 16px;
+    margin: 20px 16px 6px;
+}
+
+.tabla-contenedor p {
+    color: #94a3b8;
+    font-size: 12px;
+    margin: 0 16px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #64748b;
+    text-align: left;
+    font-size: 11px;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    font-size: 13px;
+    border-top: 1px solid #e2e8f0;
+}
+
+td:first-child {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+td:last-child {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+@media (max-width: 900px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .usuario {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .contenido {
+        margin-left: 0;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .tabla-contenedor {
+        overflow-x: auto;
+    }
+}
+
+/* FORMULARIOS */
+.formulario {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.formulario h3 {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* BOTONES */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+.formulario button {
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.eliminar {
+    background-color: #dc2626;
+}
+
+.eliminar:hover {
+    background-color: #b91c1c;
+}
+
+/* TABLAS */
+.tabla-contenedor {
+    margin-bottom: 20px;
+}
+
+.tabla-contenedor table {
+    min-width: 600px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+td button {
+    margin-right: 5px;
+}
+

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Nexo</title>
+    <link rel="stylesheet" href="../CSS/Pagina.css">
+</head>
+<body>
+
+    <aside class="menu">
+        <h2>Inicio 3</h2>
+        <p>Gestión de librería</p>
+
+        <h4>MENÚ PRINCIPAL</h4>
+
+        <nav>
+            <a href="Pagina.html">Dashboard</a>
+            <a href="productos.html">Productos</a>
+            <a href="clientes.html" class="activo">Clientes</a>
+            <a href="ventas.html">Ventas</a>
+        </nav>
+
+        <div class="usuario">
+            <strong>Marcelito Silva</strong>
+            <p>Administrador</p>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+
+        <header>
+            <div>
+                <small>Gestión de Librería</small>
+                <h4>Clientes</h4>
+            </div>
+
+            <div class="perfil">
+                <strong>VR</strong>
+            </div>
+        </header>
+
+        <main>
+            <h1>Clientes</h1>
+            <p class="subtitulo">
+                Administración de clientes registrados.
+            </p>
+
+            <section class="tabla-contenedor formulario">
+                <h3>Registrar cliente</h3>
+
+                <form>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Nombre" required>
+
+                    <label>Apellido</label>
+                    <input type="text" placeholder="Apellido" required>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="correo@gmail.com">
+
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="Ej: 1122334455">
+
+                    <button type="submit">Guardar cliente</button>
+                </form>
+            </section>
+
+            <section class="tabla-contenedor">
+                <h3>Listado de clientes</h3>
+                <p>Clientes registrados en el sistema</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                            <th>EMAIL</th>
+                            <th>TELÉFONO</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td>Alexis</td>
+                            <td>Silva</td>
+                            <td>silva.alexiset36@gmail.com</td>
+                            <td>1124564648</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button" class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#2</td>
+                            <td>Eliass</td>
+                            <td>Kuschil</td>
+                            <td>elias.kustdchilet36@hotmail.com</td>
+                            <td>1139601656</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button" class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#3</td>
+                            <td>Fran</td>
+                            <td>Bertola</td>
+                            <td>Bertola.franet36@yahoo.com</td>
+                            <td>1135512357</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button" class="eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
