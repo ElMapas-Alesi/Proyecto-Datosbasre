@@ -135,3 +135,7 @@ create table producto_promociones (
     foreign key (id_producto) references productos(id_producto),
     foreign key (id_promocion) references promociones(id_promocion)
 );
+-- Usuario para la app PHP
+CREATE USER IF NOT EXISTS 'libreria_user'@'localhost' IDENTIFIED BY 'libreria123';
+GRANT ALL PRIVILEGES ON libreria.* TO 'libreria_user'@'localhost';
+FLUSH PRIVILEGES;
