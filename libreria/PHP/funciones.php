@@ -1,5 +1,5 @@
 <?php
-// Funciones chicas para mostrar datos con el formato de la página.
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 function dinero($numero) {
     $texto = number_format((float)$numero, 2, ',', '.');

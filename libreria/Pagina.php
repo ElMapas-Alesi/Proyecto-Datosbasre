@@ -34,9 +34,9 @@ $ultimas = mysqli_query($conexion,
 
         <nav>
             <a href="Pagina.php" class="activo">Dashboard</a>
-            <a href="productos.html">Productos</a>
+            <a href="productos.php">Productos</a>
             <a href="clientes.php">Clientes</a>
-            <a href="ventas.html">Ventas</a>
+            <a href="ventas.php">Ventas</a>
         </nav>
 
         <div class="usuario">

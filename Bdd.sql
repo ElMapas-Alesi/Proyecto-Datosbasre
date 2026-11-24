@@ -91,7 +91,7 @@ create table detalle_ventas (
     subtotal decimal(10,2) not null,
     id_venta int not null,
     id_producto int not null,
-    foreign key (id_venta) references venta(id_venta),
+    foreign key (id_venta) references ventas(id_venta),
     foreign key (id_producto) references productos(id_producto)
 );
 
@@ -112,7 +112,7 @@ create table detalle_compras (
     subtotal decimal(10,2) not null,
     id_compra int not null,
     id_producto int not null,
-    foreign key (id_compra) references compra_proveedor(id_compra),
+    foreign key (id_compra) references compra_proveedores(id_compra),
     foreign key (id_producto) references productos(id_producto)
 );
 
