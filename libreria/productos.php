@@ -6,6 +6,14 @@ $lista = mysqli_query($conexion,
     "SELECT id_producto, nombre, precio, stock
      FROM productos
      ORDER BY id_producto DESC");
+
+// Mensajes de aviso según lo que se hizo
+$mensajes = [
+    '1'        => 'Producto agregado correctamente.',
+    'editado'  => 'Producto actualizado correctamente.',
+    'eliminado'=> 'Producto eliminado correctamente.',
+];
+$ok = $_GET['ok'] ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -55,8 +63,8 @@ $lista = mysqli_query($conexion,
                 Administración de productos de la librería.
             </p>
 
-            <?php if (isset($_GET['ok'])): ?>
-                <div class="aviso ok">Producto agregado correctamente.</div>
+            <?php if ($ok !== null && isset($mensajes[$ok])): ?>
+                <div class="aviso ok"><?= h($mensajes[$ok]) ?></div>
             <?php elseif (isset($_GET['error'])): ?>
                 <div class="aviso error"><?= h($_GET['error']) ?></div>
             <?php endif; ?>
@@ -101,8 +109,15 @@ $lista = mysqli_query($conexion,
                                 <td><?= h(dinero($p['precio'])) ?></td>
                                 <td><?= (int)$p['stock'] ?></td>
                                 <td>
-                                    <button type="button">Editar</button>
-                                    <button type="button" class="eliminar">Eliminar</button>
+                                    <form action="editar_producto.php" method="GET" style="display:inline">
+                                        <input type="hidden" name="id" value="<?= (int)$p['id_producto'] ?>">
+                                        <button type="submit">Editar</button>
+                                    </form>
+                                    <form action="PHP/delete_producto.php" method="POST" style="display:inline"
+                                          onsubmit="return confirm('¿Eliminar este producto?');">
+                                        <input type="hidden" name="id_producto" value="<?= (int)$p['id_producto'] ?>">
+                                        <button type="submit" class="eliminar">Eliminar</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
